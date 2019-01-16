@@ -71,7 +71,7 @@ Write a for-loop that concatenates a Number value into that string on each itera
 var stringOfNumbers = '';
 
 for(i = 10; i<=20; i++){
-   stringOfNumbers += i; //I still have a problem understand the +=... need to study this more.
+   stringOfNumbers += i; //I still have a problem understanding the +=... need to study this more.
 }
 console.log(stringOfNumbers);
 
