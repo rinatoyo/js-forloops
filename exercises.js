@@ -82,6 +82,13 @@ Write a for-loop that will push even numbers to the `evenNumArr` array. We want 
 Console.log your results.
 */
 
+var evenNumArr = '';
+
+for(i = 0; i < 101; i++){
+   if(i%2 === 0){
+      console.log(i);
+}
+} //This gives me the right answer but how does this relate/connect to the var evenNumArr?????
 
 /* 6) Up the Odds
 Declare a variable named `oddSum` and assign it to the Number value 0.
@@ -187,4 +194,3 @@ The function will iterate through the `cohort` argument and check each student's
 If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`. Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
 Console.log your result.
 */
-
