@@ -119,7 +119,7 @@ var oopsArray = ['turn', ,'down', ,'for', ,'what'];
 for(var i = 0; i<oopsArray.length; i++){
   // console.log(oopsArray[i]);
    if(i%2 === 1){
-      oopsArray[i] = 'nope';
+      oopsArray[i] = 'nope'; //or you can do oopsArray.splice(i, 1, 'nope')
    }
 }
 console.log(oopsArray);
@@ -136,10 +136,17 @@ nope
 turn
 */
 
-for(var i =0; i<oopsArray.length; i++){
-   oopsArray.reverse();
+for (var i = oopsArray.length - 1; i>=0; i--){
+   console.log(oopsArray[i])
 }
-console.log(oopsArray);
+
+/* a faster but not for-loop way:
+
+for(var i =0; i<oopsArray.length; i++){
+   oopsArray.reverse(i);
+}
+console.log(oopsArray);*/
+
 
 /* 9) Siesta Time
 Declare a variable named `napSchedule` and assign its value to the following array: `[false, false, true, false, true, true]`
@@ -151,7 +158,18 @@ Next, write a function named `nap`. This function takes in a single parameter: `
 Inside of this function write a for-loop that will iterate through the `napSchedule` array and console.log the message: `ZzZzZzZz` if the schedule is `true`, otherwise the it will console.log the message: `Gotta get coding!` if the schedule is `false`.
 */
 
+var napSchedule = [false, false, true, false, true, true];
 
+function nap(schedule){
+   for(var i = 0; i<schedule.length; i++){
+if (schedule[i] === true){
+   console.log(`ZzZzZzZz`);
+}else{
+   console.log('Gotta get coding!')
+}
+   }
+}
+nap(napSchedule);
 
 /* 10) Copy Pasta
 Declare a variable named `valuesArray` and assign its value to be an array: `[99, 66, 829, 1941, 8, 76]`. 
